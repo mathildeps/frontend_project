@@ -1,5 +1,76 @@
-<!doctype html>
-<html>
-<p>Hej</p>
+<div id="myslider" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myslider" data-slide-to="0" class="active"></li>
+          <li data-target="#myslider" data-slide-to="1"></li>
+          <li data-target="#myslider" data-slide-to="2"></li>
+        </ol>
+ 
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/slide1.png" alt="first slide">
+            <div class="carousel-caption">
+              <p><a class="ship" href="#">FREE SHIPPING</a></p>
+              <h3>A New Beautiful Summer Look</h3>
+              <p><a class="btn btn-lg btn-success" href="#">Shop Now</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/slide2.png" alt="second slide">
+            <div class="carousel-caption">
+              <p><a class="ship" href="#">FREE SHIPPING</a></p>
+              <h3>Great New Things For The Summer Time</h3>
+              <p><a class="btn btn-lg btn-success" href="#">Shop Now</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/slide3.png" alt="second slide">
+            <div class="carousel-caption">
+              <p><a class="ship" href="#">FREE SHIPPING</a></p>
+              <h3>All That You Need, Right Here</h3>
+              <p><a class="btn btn-lg btn-success" href="#">Shop Now</a></p>
+            </div>
+          </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myslider" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#myslider" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div> <!-- Carousel -->
 
-</html>
+      <div class="panel panel-default firstpan" ng-controller="StoreController as storectlr">
+        <div class="panel-heading">Daily Deals</div>
+        <div class="panel-body">
+          <div class="row">
+            <div ng-controller="StoreController as storectlr">
+              <div class="col-md-3 col-sm-6 col-xs-12 products" ng-repeat="product in storectlr.products">
+                <a href="/productpage/{{product.id}}" class="thumb"><img ng-src="{{product.image}}"/></a>
+
+                    <a href="/productpage/{{product.id}}"><h5>{{product.name}}</h5></a>
+                    <h5 ng-click="putIntoBasket(product)">${{product.price}}</h5>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="panel panel-default firstpan" ng-controller="StoreController as storectlr">
+        <div class="panel-heading">Popular Products </div>
+        <div class="panel-body">
+          <div class="row">
+            <div>
+              <div class="col-md-3 col-sm-6 col-xs-12 products" ng-repeat="popular in storectlr.popularproducts">
+                <a href="/productpage/{{product.id}}" class="thumb"><img ng-src="{{popular.image}}"/></a>
+
+                    <a href="/productpage/{{popular.id}}"><h5>{{popular.name}}</h5></a>
+                    <h5>${{popular.price}}</h5>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+

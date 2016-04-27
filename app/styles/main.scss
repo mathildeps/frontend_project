@@ -4,6 +4,7 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import 'colors';
 
 
@@ -31,17 +32,20 @@ body {
    
 }
 
-.navbar-inverse {
+body {
+  .navbar-inverse {
 
-  .navbar-nav {  
-    
-    li { 
+    .navbar-nav {  
       
-       a {
-        color: $font-color;
+      li { 
+        
+         a {
+          color: $font-color;
+          font-size: 15px;
+        }
       }
-    }
-  } 
+    } 
+  }
 }
 
 .navbar-inverse {
@@ -83,6 +87,12 @@ body {
 }
 
 .navbar-inverse {
+  .navbar-brand:focus {
+  color: $font-color;
+  }
+}
+
+.navbar-inverse {
   #brand-narrow {
   font-weight: 200;
   }
@@ -100,14 +110,27 @@ body {
           border-radius: $radius;
 }
 
- .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child) { @include border-radius(4px 0px 0px 4px); }
+ .input-group-addon:not(:first-child):not(:last-child), 
+ .input-group-btn:not(:first-child):not(:last-child), 
+ .input-group .form-control:not(:first-child):not(:last-child) 
+ { @include border-radius(4px 0px 0px 4px); }
 
 .no-radius {
   border-radius: 0px;
 }
 
  .bred {
- width: 60px;
+  width: 60px;
+  background-color: #2a96d4;
+  border-color: #2a96d4;
+ }
+
+ .cart-icon {
+  padding: 0px 8px 6px 4px;
+ }
+
+.count-icon {
+  padding: 0px 8px 6px 8px;
  }
 
 .carousel-caption {
@@ -149,6 +172,12 @@ a.ship {
       font-family: $lightfont;
       font-size: 24px;
     }
+}
+
+.products {
+  display: block;  
+  margin-right: auto;  
+  margin-left: auto; 
 }
 
 
@@ -200,18 +229,3 @@ a.ship {
     font-family: $lightfont;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

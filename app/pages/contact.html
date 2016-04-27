@@ -1,0 +1,48 @@
+<h1>Im a contactpage</h1>
+
+<div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="well well-sm medlem">
+          <form name="Cform" class="form-horizontal" ng-controller="FormController as formctlr"  ng-submit='Cform.$valid && formctlr.sendform()' novalidate>
+          <fieldset>
+            <legend class="text-center medlemh1">Contact us</legend>
+    
+           
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Name</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" placeholder="Your name" class="form-control" ng-model="formctlr.contactform.name" required>
+              </div>
+            </div>
+    
+           
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email">E-mail</label>
+              <div class="col-md-9">
+                <input id="email" name="email" type="email" placeholder="E-mail" class="form-control" ng-model="formctlr.contactform.email">
+              </div>
+            </div>
+    
+            
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="message">Your Message</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="message" name="message" placeholder="Write here..." rows="5" ng-model="formctlr.contactform.message"></textarea>
+              </div>
+            </div>
+    
+  
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-primary btn-lg btn-custom">Send</button>
+              </div>
+            </div>
+          </fieldset>
+
+          {{Cform.$valid}}
+          </form>
+        </div>
+      </div>
+	</div>
+
+
