@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>frontend_all</title>
+    <title>HellJee</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -26,10 +26,10 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">  
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">  
       <div class="container">
         <div class="navbar-header">
-              <div class="navbar-header"><a class="navbar-brand" href="#">Hell<span id="brand-narrow">Jee</span></a></div>
+              <div class="navbar-header"><a class="navbar-brand" href="/Home">Sell<span id="brand-narrow">Jee</span></a></div>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -39,19 +39,30 @@
         </div>
     
         <div class="collapse navbar-collapse">
-          <div class="col-sm-3 col-md-6">
-             
-          <form class="navbar-form" role="search">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-            <div class="input-group-btn">
-              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+          <div class="col-sm-3 col-md-6 soog">
+            <div class="input-group">
+              <input type="hidden" name="search_param" value="all" id="search_param">         
+              <input type="text" class="form-control" name="x" placeholder="Search...">
+              <div class="input-group-btn search-panel">
+                <button type="button" class="btn btn-default dropdown-toggle no-radius" data-toggle="dropdown">
+                  <span id="search_concept">All Categories</span> <span class="caret"></span>
+                </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#1">Category 1</a></li>
+                    <li><a href="#2">Category 2</a></li>
+                    <li><a href="#3">Category 3</a></li>
+                    <li><a href="#4">Category 4</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#all">Anything</a></li>
+                  </ul>
+              </div>
+              <span class="input-group-btn">
+                <button class="btn btn-primary bred" type="button"><span class="glyphicon glyphicon-search"></span></button>
+              </span>
             </div>
           </div>
-          </form>
-          </div>
           <ul class="nav navbar-nav pull-right">
-            <li><a href="#">Cart</a></li>
+            <li><a href="#"><img alt="cart icon" src="images/cart.png">Cart</a></li>
             <li><a href="#">Wishlist</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
@@ -64,9 +75,9 @@
          
         </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
       <div class="container"> 
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -79,9 +90,9 @@
         
         <div class="collapse navbar-collapse">
           
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav active">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Shop by Category <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop by Category <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Category 1</a></li>
                   <li><a href="#">Category 2</a></li>
@@ -101,56 +112,145 @@
           
         </div>
       </div>
-    </div>
+    </nav>
   
     <div class="container">
+      <div id="myslider" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myslider" data-slide-to="0" class="active"></li>
+          <li data-target="#myslider" data-slide-to="1"></li>
+          <li data-target="#myslider" data-slide-to="2"></li>
+        </ol>
+ 
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/slide1.png" alt="first slide">
+            <div class="carousel-caption">
+              <p><a class="ship" href="#">FREE SHIPPING</a></p>
+              <h3>A New Beautiful Summer Look</h3>
+              <p><a class="btn btn-lg btn-success" href="#">Shop Now</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/slide2.png" alt="second slide">
+            <div class="carousel-caption">
+              <p><a class="ship" href="#">FREE SHIPPING</a></p>
+              <h3>Great New Things For The Summer Time</h3>
+              <p><a class="btn btn-lg btn-success" href="#">Shop Now</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/slide3.png" alt="second slide">
+            <div class="carousel-caption">
+              <p><a class="ship" href="#">FREE SHIPPING</a></p>
+              <h3>All That You Need, Right Here</h3>
+              <p><a class="btn btn-lg btn-success" href="#">Shop Now</a></p>
+            </div>
+          </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myslider" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#myslider" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div> <!-- Carousel -->
 
-      <div class="jumbotron">
-        <h1></h1>
-        <p class="lead"></p>
-        <p><a class="btn btn-lg btn-success" href="#">Shop now</a></p>
+      <div class="panel panel-default firstpan">
+        <div class="panel-heading">Daily Deals</div>
+        <div class="panel-body">
+          <div class="row">
+            <div ng-controller="StoreController as storectlr">
+              <div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="product in storectlr.products">
+                <a href="/productpage/{{product.id}}" class="thumb"><img ng-src="{{product.image}}"/></a>
+
+                    <a href="/productpage/{{product.id}}"><h5>{{product.name}}</h5></a>
+                    <p>{{product.description}}</p>
+                    <h5>${{product.price}}</h5>
+                  
+                
+              </div>
+            </div>
+            
+          </div> 
+        </div>
       </div>
 
-      <div class="row marketing">
+     
+
+
+
+
+
+
+
+
+
+       
+     
+
+      <div class="row">
         <div class="col-lg-6">
           <h4>Stuff</h4>
           <div ng-controller="StoreController as storectlr">
-<!--             <ul>
+            <ul>
               <li ng-repeat="product in storectlr.products">
-        <h1>{{product.name}}</h1>
-        <h2>${{product.price}}</h2>
-        <p>{{product.description}}</p>
-      </li>
-    </ul> -->
-    </div>
+                <h5>{{product.name}}</h5>
+                <p>{{product.description}}</p>
+                <h5>${{product.price}}</h5>
+              </li>
+            </ul> 
+          </div>
           
           
         </div>
       </div>
 
-      <footer class="navbar navbar-fixed-bottom footer">
+      <div ng-view></div>
+      </div>
+      <footer class="footer">
          <div class="container">
            <div class="row">
-             <div class="col-xs-6 col-md-4 col-lg-3">
-               <p>column</p>
-               <a href="#">New Products</a>
+             <div class="col-xs-12 col-md-6 col-lg-3 foolinks">
+               <h4>How to Buy</h4>
+               <a href="#">Create an Account</a>
+               <a href="#">Making Payments</a>
+               <a href="#">Delivery Options</a>
+               <a href="#">Buyer Protection</a>
+               <a href="#">New User Guide</a>
              </div>
-             <div class="col-xs-6 col-md-4 col-lg-3">
-               <p>column</p>
-               <a href="#">New Products</a>
+             <div class="col-xs-12 col-md-6 col-lg-3 foolinks">
+               <h4>Customer Service</h4>
+               <a href="#">Terms</a>
+               <a href="#">Orders and Returns</a>
+               <a href="#">Contact us</a>
+               <a href="#">Organization & Technical Support</a>
              </div>
-             <div class="col-xs-6 col-md-4 col-lg-3">
-               <p>column</p>
-               <a href="#">New Products</a>
+             <div class="col-xs-12 col-md-6 col-lg-3 foolinks">
+               <h4>About</h4>
+               <a href="#">Company Info</a>
+               <a href="#">News</a>
+               <a href="#">Investors</a>
+               <a href="#">Careers</a>
+               <a href="#">Advertise with us</a>
              </div>
-             <div class="col-xs-6 col-md-4 col-lg-3">
-               <p>Column</p>
-               <a href="#">New Products</a>
+             <div class="col-xs-12 col-md-6 col-lg-3 lastlinks">
+               <h4>Stay Connected</h4>
+               <a href="#"><img src="images/facebook.png" class="ikon" alt="LinkedIn ikon"/></a>
+               <a href="#"><img src="images/twit.png" class="ikon" alt="ikon"/></a>
+               <a href="#"><img src="images/g.png" class="ikon" alt="ikon"/></a>
+               <a href="#"><img src="images/linked.png" class="ikon" alt="ikon"/></a>
+               <p>Copyright 1995-2016 SellJee</p>
+               <p>All Rights Reserved</p>
+               <a href="#">User Agreement. Privacy. Cookies</a>
              </div>
            </div>
          </div>
       </footer>
-    </div>
+    
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

@@ -3,7 +3,9 @@ $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+
 @import 'colors';
+
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -12,17 +14,34 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
 body {
   padding-top: 50px;
-  padding-bottom: 20px;
   background-color: $body-background;
   font-family: $mainfont;
 }
 
+.navbar {
+  margin-bottom: 40px;
+
+}
+
 .navbar-inverse {
   background-color: $whitecolor;
-  border-color: $whitecolor;
+  border: none;
+   
+}
+
+.navbar-inverse {
+
+  .navbar-nav {  
+    
+    li { 
+      
+       a {
+        color: $font-color;
+      }
+    }
+  } 
 }
 
 .navbar-inverse {
@@ -32,17 +51,19 @@ body {
     li { 
       
       a:hover {
-        color: #000;
+        color: #fff;
         background-color: $main-green;
       }
     }
   } 
 }
+
 .navbar-inverse {
   .navbar-nav {
     li {
       a:focus {
-        color: #000;
+        color: #fff;
+        background-color: $main-green;
       }
     }
   }
@@ -56,90 +77,141 @@ body {
 }
 
 .navbar-inverse {
+  .navbar-brand:hover {
+  color: $main-green;
+  }
+}
+
+.navbar-inverse {
   #brand-narrow {
   font-weight: 200;
   }
 }
 
+.soog {
+  top: 10px;
+  left: 64px;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+ .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child) { @include border-radius(4px 0px 0px 4px); }
+
+.no-radius {
+  border-radius: 0px;
+}
+
+ .bred {
+ width: 60px;
+ }
+
+.carousel-caption {
+  
+  h3 {
+    font-family: $h3font;
+    font-size: 60px;
+    font-weight: 600;
+  }
+}
+
+.carousel-caption{
+  bottom:50px;
+}
+
+.carousel-caption {
+    
+    .btn {
+      margin-top:10px;
+      width: 158px;
+      font-size: 13px;
+      background-color: $main-green;
+    }
+}
+
+a.ship {
+  background-color: #f9ad0b;
+  height:30px;
+  border-radius: 15px;
+  color: $whitecolor;
+  padding: 4px 14px;
+  font-size: 11px;
+}
+
+.firstpan {
+  margin-top:40px;  
+    .panel-heading{
+      background-color: $whitecolor;
+      font-family: $lightfont;
+      font-size: 24px;
+    }
+}
+
 
 .footer {
-  padding: 20px;
+  padding: 25px;
   background-color: #202326;
+    h4 {
+      color: #a3a9ad;
+      font-size: 16px;
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+.ikon {
+  padding:1px;
+  margin-bottom: 10px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+.foolinks {
+
+  a {
+    display:block;
+    color: $whitecolor;
+    padding:4px 4px 4px 0px;
+    font-family: $lightfont;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $main-green;
+  }
+}
+
+.lastlinks {
   
+  a {
+    color: $whitecolor;
+    padding:4px 4px 4px 0px;
+    font-family: $lightfont;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $main-green;
+  }
+}
+
+.lastlinks {
   
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+  p {
+    color: $whitecolor;
+    font-family: $lightfont;
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
 
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
