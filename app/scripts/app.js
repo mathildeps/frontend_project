@@ -10,14 +10,14 @@ app.config(['$routeProvider',
       }).
       when('/basket/:productId', {
         templateUrl: 'pages/basket.html',
-        controller: 'PhoneDetailCtrl'
+        controller: 'DetailCtrl'
       }).
         when('/contact', {
         templateUrl: 'pages/contact.html',
         controller: 'FormController'
       }).
       otherwise({
-        redirectTo: '/Home'
+        redirectTo: '/home'
       });
 }]);
 
@@ -64,18 +64,10 @@ var popular = [{
    image: 'images/sol.png'
 }];
 
-app.controller('StoreController', function($scope){
-
-  $scope.basket = [];
-
+app.controller('StoreController', function(){
 	this.products = daily;
   this.popularproducts = popular;
 
-  $scope.putIntoBasket = function(prod) {
-    $scope.basket.push(prod);
-
-    console.log($scope.basket);
-  }
 
 });
 
@@ -87,6 +79,8 @@ app.controller('FormController', function($scope) {
   $scope.sendform = function() {
     $scope.contactform = {};
     console.log("Sådan");
+    alert('Your message was sent');
+
   }
 });
 
