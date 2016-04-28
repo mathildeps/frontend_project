@@ -46,13 +46,10 @@
         <div class="panel-heading">Daily Deals</div>
         <div class="panel-body">
           <div class="row">
-            <div ng-controller="StoreController as storectlr">
-              <div class="col-md-3 col-sm-6 col-xs-12 products" ng-repeat="product in storectlr.products">
-                <a href="/productpage/{{product.id}}" class="thumb"><img ng-src="{{product.image}}"/></a>
-
-                    <a href="/productpage/{{product.id}}"><h5>{{product.name}}</h5></a>
-                    <h5 ng-click="putIntoBasket(product)">${{product.price}}</h5>
-              </div>
+          	<div class="col-md-3 col-sm-6 col-xs-12 products" ng-repeat="product in storectlr.products">
+              <a href="#/productdetail/{{product.id}}" class="thumb"><img ng-src="{{product.image}}"/></a>
+			  <a href="#/productdetail/{{product.id}}"><h5>{{product.name}}</h5></a>
+              <h5>${{product.price}}</h5>
             </div>
           </div> 
         </div>
@@ -62,13 +59,23 @@
         <div class="panel-heading">Popular Products </div>
         <div class="panel-body">
           <div class="row">
-            <div>
-              <div class="col-md-3 col-sm-6 col-xs-12 products" ng-repeat="popular in storectlr.popularproducts">
-                <a href="/productpage/{{product.id}}" class="thumb"><img ng-src="{{popular.image}}"/></a>
+            <div class="col-md-3 col-sm-6 col-xs-12 products" ng-repeat="popular in storectlr.popularproducts">
+              <a href="#/productdetail/{{product.id}}" class="thumb"><img ng-src="{{popular.image}}"/></a>
+              <a href="#/productdetail/{{product.id}}"><h5>{{popular.name}}</h5></a>
+              <h5>${{popular.price}}</h5>
+            </div>
+          </div> 
+        </div>
+      </div>
 
-                    <a href="/productpage/{{popular.id}}"><h5>{{popular.name}}</h5></a>
-                    <h5>${{popular.price}}</h5>
-              </div>
+       <div class="panel panel-default firstpan" ng-controller="StoreController as storectlr">
+        <div class="panel-heading">Electronics </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 products" ng-repeat="popular in storectlr.popularproducts">
+              <a href="#/productdetail/{{product.id}}" class="thumb"><img ng-src="{{popular.image}}"/></a>
+              <a href="#/productdetail/{{product.id}}"><h5>{{popular.name}}</h5></a>
+              <h5>${{popular.price}}</h5>
             </div>
           </div> 
         </div>

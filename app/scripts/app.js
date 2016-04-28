@@ -8,8 +8,8 @@ app.config(['$routeProvider',
         templateUrl: 'pages/productpage.html',
         controller: 'StoreController'
       }).
-      when('/basket/:productId', {
-        templateUrl: 'pages/basket.html',
+      when('/productdetail/:productId', {
+        templateUrl: 'pages/productdetail.html',
         controller: 'DetailCtrl'
       }).
         when('/contact', {
@@ -73,7 +73,7 @@ app.controller('StoreController', function(){
 
 
 
-app.controller('FormController', function($scope) {
+app.controller('FormController', function($scope){
   $scope.contactform = {};
 
   $scope.sendform = function() {
@@ -83,6 +83,11 @@ app.controller('FormController', function($scope) {
 
   }
 });
+
+app.controller('DetailCtrl', ['$scope', '$routeParams',
+  function($scope, $routeParams) {
+    $scope.productId = $routeParams.productId;
+}]);
 
 })();
 
