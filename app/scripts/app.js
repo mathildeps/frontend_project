@@ -23,32 +23,38 @@ app.config(['$routeProvider',
 
 
 var daily = [{
-	name: 'Citizen Eco-Drive Mens Watch',
+	id: 1,
+  name: 'Citizen Eco-Drive Mens Watch',
 	price: 260.90,
   image: 'images/ur.png'
 },
 {
-	name: 'Mens Faux-Leather Bomber Jacket',
+	id: 2,
+  name: 'Mens Faux-Leather Bomber Jacket',
 	price: 120.00,
    image: 'images/bumper.png'
 },
 {
+  id: 3,
 	name: 'Dell Inspiron 13.3 Touchscreen Laptop',
 	price: 478.90,
    image: 'images/tablet.png'
 },
 {
+  id: 4,
   name: 'Panasonic Lumix DMC-GH4',
   price: 250.00,
    image: 'images/kamera.png'
 }];
 
 var popular = [{
+  id: 4,
   name: 'Nike Mercurial Superfly IV FG',
   price: 299.99,
   image: 'images/sko.png'
 },
 {
+  id: 5,
   name: 'JZ CHIEF brand Designer Women Bag',
   price: 49.90,
    image: 'images/taske.png'
@@ -73,18 +79,18 @@ app.controller('StoreController', function(){
 
 
 
-app.controller('FormController', function($scope){
-  $scope.contactform = {};
+app.controller('FormController', function(){
+  this.contactform = {};
 
-  $scope.sendform = function() {
-    $scope.contactform = {};
+  this.sendform = function() {
+    this.contactform = {};
     console.log("Sådan");
     alert('Your message was sent');
 
   }
 });
 
-app.controller('DetailCtrl', ['$scope', '$routeParams',
+app.controller('DetailCtrl', ['$scope', '$http','$routeParams',
   function($scope, $routeParams) {
     $scope.productId = $routeParams.productId;
 }]);
