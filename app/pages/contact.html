@@ -1,7 +1,7 @@
 <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="well well-sm">
-          <form name="Cform" class="form-horizontal" ng-controller="FormController as formctlr"  ng-submit='Cform.$valid && formctlr.sendform()' novalidate>
+          <form name="Cform" class="form-horizontal" data-ng-controller="FormController as formctlr"  data-ng-submit='Cform.$valid && formctlr.sendform()' novalidate>
           <fieldset>
             <legend class="text-center">Contact us</legend>
     
@@ -9,7 +9,7 @@
             <div class="form-group">
               <label class="col-md-3 control-label" for="name">Name</label>
               <div class="col-md-9">
-                <input id="name" name="name" type="text" placeholder="Your name" class="form-control" ng-model="formctlr.contactform.name" required>
+                <input id="name" name="name" type="text" placeholder="Your name" class="form-control" data-ng-model="formctlr.contactform.name" required>
               </div>
             </div>
     
@@ -17,7 +17,7 @@
             <div class="form-group">
               <label class="col-md-3 control-label" for="email">E-mail</label>
               <div class="col-md-9">
-                <input id="email" name="email" type="email" placeholder="E-mail" class="form-control" ng-model="formctlr.contactform.email">
+                <input id="email" name="email" type="email" placeholder="E-mail" class="form-control" data-ng-model="formctlr.contactform.email" required>
               </div>
             </div>
     
@@ -25,7 +25,7 @@
             <div class="form-group">
               <label class="col-md-3 control-label" for="message">Your Message</label>
               <div class="col-md-9">
-                <textarea class="form-control" id="message" name="message" placeholder="Write here..." rows="5" ng-model="formctlr.contactform.message"></textarea>
+                <textarea class="form-control" id="message" name="message" placeholder="Write here..." rows="5" data-ng-model="formctlr.contactform.message"></textarea>
               </div>
             </div>
     
@@ -36,8 +36,6 @@
               </div>
             </div>
           </fieldset>
-
-          {{Cform.$valid}}
           </form>
         </div>
       </div>

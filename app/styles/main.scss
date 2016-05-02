@@ -164,6 +164,17 @@ a.ship {
   padding: 4px 14px;
   font-size: 11px;
 }
+p.ship {
+  background-color: #f9ad0b;
+  width:76px;
+  border-radius: 15px;
+  color: $whitecolor;
+  padding: 4px 14px;
+  font-size: 11px;
+  position:relative;
+  z-index:1;
+  top:34px;
+}
 
 .firstpan {
   margin-top:40px;  
@@ -175,9 +186,7 @@ a.ship {
 }
 
 .products {
-  display: block;  
-  margin-right: auto;  
-  margin-left: auto; 
+  text-align:center;
 }
 
 input.ng-invalid.ng-touched {
@@ -240,4 +249,119 @@ input.ng-valid.ng-touched {
     color: $whitecolor;
     font-family: $lightfont;
   }
+}
+
+.proimg {
+  padding-bottom:25px;
+}
+
+.popimg {
+  padding-top:25px;
+}
+
+.products {
+  border-right: 0.5px solid #dde2e6;
+  
+  a {
+    color:$font-color;
+    text-decoration:none;
+    font-size:16px;
+    font-family:$mainfont;
+  }
+  a:hover {
+    color:$main-green;
+  }
+  h5 {
+    font-size:16px;
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+  h6 {
+    color: $font-color;
+    font-size:14px;
+  }
+  span {
+    color: #a3a9ad;
+    font-size:14px;
+    text-decoration:line-through;
+  }
+}
+ 
+.electronback {
+  background-image: url("../images/electronbackground.png");
+  height: 316px;
+  background-repeat:no-repeat;
+  h3 {
+    font-family: Montserrat, sans-serif;
+    font-weight:600;
+    margin-top: 40px;
+    line-height:1.6;
+  }
+  .btn-group {
+    margin-top:45px;
+  }
+  #og {
+    margin-top:20px;
+  }
+  .btn-buy {
+    background-color:$main-green;
+    border:$main-green;
+  }
+
+  .btn-buynow {
+    @extend .btn-buy;
+    padding:6px 40px 6px 40px;
+    border-left:solid 0.5px #202326;
+
+  }
+}
+
+.smallproducts {
+  border-right: 0.5px solid #dde2e6;
+  height:158px;
+  
+  a {
+    color:$font-color;
+    text-decoration:none;
+    font-size:16px;
+    font-family:$mainfont;
+  }
+  a:hover {
+    color:$main-green;
+  }
+  h5 {
+    font-size:16px;
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+  h6 {
+    color: $font-color;
+    font-size:14px;
+  }
+  span {
+    color: #a3a9ad;
+    font-size:14px;
+    text-decoration:line-through;
+  }
+  .img-small {
+    padding:25px;
+  }
+}
+
+.img-ur {
+  height: 300px;
+  float: left;
+  padding:50px;
+}
+
+.spacing {
+  height: 400px;
+}
+
+.sub {
+  height: 120px;
+  background-color: $whitecolor;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
 }
